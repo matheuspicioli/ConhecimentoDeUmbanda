@@ -15,9 +15,13 @@ export default class Home extends Component {
     render() {
         return (
             <ScrollView contentContainerStyle={baseStyle.scrollContainer}>
-                <Lista option='entidade' navegar={this.navegar} />
+                <Lista
+                    option='entidade'
+                    label='Entidades'
+                    navegar={this.navegar}
+                />
                 <Linha />
-                <Lista option='orixa' navegar={this.navegar} />
+                <Lista option='orixa' label='Orixás' navegar={this.navegar} />
             </ScrollView>
         );
     }

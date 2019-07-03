@@ -9,49 +9,118 @@ import styles from './styles';
 class Lista extends Component {
     state = {
         orixa: [
-            'oxal',
-            'oyaTempo',
-            'iemanja',
-            'omulu',
-            'ogum',
-            'iansa',
-            'oxossi',
-            'oba',
-            'egunita',
-            'xango',
-            'oxumare',
-            'oxum',
-            'obaluae',
-            'nana'
+            {
+                param: 'oxala',
+                label: 'Oxalá'
+            },
+            {
+                param: 'oyaTempo',
+                label: 'Oya Tempo'
+            },
+            {
+                param: 'iemanja',
+                label: 'Iemanjá'
+            },
+            {
+                param: 'omulu',
+                label: 'Omulú'
+            },
+            {
+                param: 'ogum',
+                label: 'Ogum'
+            },
+            {
+                param: 'iansa',
+                label: 'Iansã'
+            },
+            {
+                param: 'oxossi',
+                label: 'Oxóssi'
+            },
+            {
+                param: 'oba',
+                label: 'Obá'
+            },
+            {
+                param: 'egunita',
+                label: 'Egunitá'
+            },
+            {
+                param: 'xango',
+                label: 'Xangô'
+            },
+            {
+                param: 'oxumare',
+                label: 'Oxumaré'
+            },
+            {
+                param: 'oxum',
+                label: 'Oxum'
+            },
+            {
+                param: 'obaluae',
+                label: 'Obaluaê'
+            },
+            {
+                param: 'nana',
+                label: 'Nanã'
+            }
         ],
         entidade: [
-            'caboclo',
-            'ere',
-            'pretoVelho',
-            'baiano',
-            'cigano',
-            'marinheiro',
-            'boiadeiro',
-            'exu',
-            'pomboGira'
+            {
+                param: 'caboclo',
+                label: 'Caboclo'
+            },
+            {
+                param: 'ere',
+                label: 'Erê'
+            },
+            {
+                param: 'pretoVelho',
+                label: 'Preto Velho'
+            },
+            {
+                param: 'baiano',
+                label: 'Baiano'
+            },
+            {
+                param: 'cigano',
+                label: 'Cigano'
+            },
+            {
+                param: 'marinheiro',
+                label: 'Marinheiro'
+            },
+            {
+                param: 'boiadeiro',
+                label: 'Boiadeiro'
+            },
+            {
+                param: 'exu',
+                label: 'Exú'
+            },
+            {
+                param: 'pomboGira',
+                label: 'Pombo Gira'
+            }
         ]
     };
 
     render() {
-        const {option} = this.props;
+        const {option, label} = this.props;
         const list = this.state[option];
 
         return (
             <View style={baseStyles.container}>
-                <Text style={styles.title}>{option}</Text>
-                {list.map((nome, index) => (
+                <Text style={styles.title}>{label}</Text>
+                {list.map((inform, index) => (
                     <Button
-                        style={styles.button}
                         key={index}
+                        style={styles.button}
                         mode='contained'
-                        onPress={() => this.props.navegar(option, nome)}
+                        onPress={() => this.props.navegar(option, inform.param)}
                     >
-                        {nome}
+                        {inform.label}
                     </Button>
                 ))}
             </View>

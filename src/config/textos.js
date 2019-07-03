@@ -12,7 +12,7 @@ export default {
     },
     orixas: {
         oxala: 'Texto Oxalá',
-        oyaTempo: 'Texto Ogum',
+        oyaTempo: 'Texto Oya Tempo',
         iemanja: 'Texto Iemanjá',
         omulu: 'Texto omulu',
         ogum: 'Texto Ogum',
