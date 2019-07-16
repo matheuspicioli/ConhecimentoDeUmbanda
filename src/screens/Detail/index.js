@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {ScrollView, Text} from 'react-native';
 
 import baseStyles from '../../styles';
+import styles from './styles';
 
 import textos from '../../config/textos';
 
@@ -55,7 +56,7 @@ class Detail extends Component {
 
         return (
             <ScrollView contentContainerStyle={baseStyles.scrollContainer}>
-                <Text>{texto}</Text>
+                <Text style={styles.texto}>{texto}</Text>
             </ScrollView>
         );
     }
