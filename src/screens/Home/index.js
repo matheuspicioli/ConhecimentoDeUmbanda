@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {ScrollView} from 'react-native';
 import Lista from '../../components/Lista';
 import Linha from '../../components/Linha';
+import Footer from '../../components/Footer';
 
 import baseStyle from '../../styles';
 
@@ -22,6 +23,7 @@ export default class Home extends Component {
                 />
                 <Linha />
                 <Lista option='orixa' label='Orixás' navegar={this.navegar} />
+                <Footer />
             </ScrollView>
         );
     }
